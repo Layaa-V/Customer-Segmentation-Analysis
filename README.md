@@ -15,23 +15,17 @@ Three clustering algorithms **(K-Means**, **Hierarchical Clustering**, and **DBS
 - **marketing_campaign.csv** — The **raw dataset** containing customer demographic, purchase, and campaign data.  
 
 ### 🧹 Data Cleaning and Transformation
-All preprocessing steps are detailed in **`Customer_Data_Cleaning.ipynb`**.  
+All preprocessing steps are detailed in **Customer_Data_Cleaning.ipynb**.  
 This notebook performs:
-1. **Handling Missing Values:**  
-   - Replaced missing numeric values with the median and categorical values with the mode.  
-2. **Encoding Categorical Data:**  
-   - Converted all categorical variables into numerical representations.  
-3. **Feature Scaling and Standardization:**  
-   - Standardized numerical features to ensure uniform contribution.  
-4. **Dimensionality Reduction:**  
-   - Applied **Principal Component Analysis (PCA)** to reduce dimensionality while retaining maximum variance.
+1. **Handling Missing Values:** Replaced missing numeric values(observed in the feature'Income') with the median value.
+2. **CCreating onclusive Columns:** For repetitve variety features, like 'Total_Spending' and 'Total_Campaigns_Accepted'.
+3. **Encoding Categorical Data:** Can be seen for the feature 'Education' and 'Marital_Status'.    
+4. **Dimensionality Reduction:** Applied **Principal Component Analysis (PCA)** to reduce dimensionality while retaining maximum variance.
 
 ### 🧾 Cleaning Outputs
-Here are a few details about the cleaning part:
-1. `marketing_campaign.csv` - raw data  
-2. `Customer Data Cleaning.ipynb` - shows steps involved in cleaning; produces two types of data files:  
-   - `cdata.csv` (cleaned data with similar original features as raw data)  
-   - `cleaned_customer_data.csv` (data file produced after PCA; reduced dimensions; used for clustering)
+Here are the details of the data files gained after data cleaning:
+1. **cdata.csv:** It contains cleaned data with features similar to original features as raw data. It is used further for drawing customer insights per cluster(group).
+2. **cleaned_customer_data.csv:** This is the data file produced after PCA was performed, and has reduced dimensions. It is the main data file upon whicih the clustering algorithms were performed. 
 
 ---
 
