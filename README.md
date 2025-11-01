@@ -135,11 +135,8 @@ Overall, **Hierarchical Clustering** was found to be the most robust and effecti
 ---
 
 ## Contributors
-
-**Layaa Vishwakarma (M25CSA017)**
-
-**Prapti Halder (M25CSA022)**
-
+**Layaa Vishwakarma (M25CSA017)** 
+**Prapti Halder (M25CSA022)** 
 **Suparni Maitra (M25CSA029)**  
 
 *Course: CSL7620 – Machine Learning (Semester I)*  
