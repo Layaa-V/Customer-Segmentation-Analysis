@@ -1,34 +1,13 @@
 # 🧠 Customer Segmentation Using Clustering
 
-## 📘 Project Overview
-This project performs **Customer Segmentation** using **unsupervised machine learning** algorithms to group customers based on their **purchase history** and **demographic data**.  
-The aim is to uncover distinct, meaningful customer segments to enable **targeted marketing**, **personalized services**, and **strategic decision-making**.
+## 📘 Project Overview 
+This project focuses on **Customer Segmentation** through **unsupervised machine learning** to group customers based on **demographic and purchase behavior**. The goal is to identify distinct customer profiles for **targeted marketing**, **personalized services**, and **strategic decision-making**.  
 
-To ensure robustness, the project implements three clustering algorithms — **K-Means**, **Hierarchical Clustering**, and **DBSCAN** — and evaluates them using **three custom-built internal metrics**:  
-- Separation / Spread Ratio  
-- Calinski–Harabasz (CH) Index  
-- Davies–Bouldin Index (DBI)
+Three clustering algorithms — **K-Means**, **Hierarchical Clustering**, and **DBSCAN** — are implemented **from scratch** and evaluated using three internal metrics:  
+- **Separation / Spread Ratio**  
+- **Calinski–Harabasz (CH) Index**  
+- **Davies–Bouldin Index (DBI)**  
 
----
-
-## 🎯 Objectives
-- Implement multiple clustering algorithms from scratch for customer segmentation.  
-- Perform data preprocessing including missing value handling, categorical encoding, and dimensionality reduction.  
-- Evaluate the performance of each clustering technique using custom-built and standard metrics.  
-- Identify the most effective clustering method for meaningful customer segmentation.
-
----
-
-## 🧰 Main Python Libraries Used
-| Library | Purpose |
-|----------|----------|
-| **Pandas** | Data manipulation and preprocessing (loading, grouping, selecting columns). |
-| **NumPy** | Numerical operations, array manipulations, and distance calculations. |
-| **Matplotlib & Seaborn** | Visualization of clustering results and PCA projections. |
-| **Scikit-learn** | Feature scaling, evaluation metrics, and PCA. |
-| **SciPy** | Hierarchical clustering implementation and dendrogram visualization. |
-
----
 
 ## ⚙️ Dataset and Preprocessing
 
@@ -56,78 +35,8 @@ Here are a few details about the cleaning part:
 
 ---
 
-## ⚙️ Workflow of the Project
-### 1. **Data Preprocessing**
-- Input: `marketing_campaign.csv`  
-- Executed via: `Customer Data Cleaning.ipynb`  
-- Output: `cdata.csv`, `cleaned_customer_data.csv`  
 
-### 2. **Data Clustering**
-Three clustering algorithms were implemented **from scratch** and executed individually on the cleaned (PCA-reduced) dataset.
-
-| Algorithm | File Name | Description |
-|------------|------------|-------------|
-| **K-Means Clustering** | `K_means_code.ipynb` | Iterative partitioning into *k* clusters using K-Means++ initialization. Optimal *k* determined via hybrid Elbow–Silhouette method. |
-| **Hierarchical Clustering** | `Hierarchical_Clustering.ipynb` | Built using Ward's linkage and visualized with a dendrogram. Optimal *k* obtained using silhouette analysis. |
-| **DBSCAN** | `DBSCAN_Clustering.ipynb` | Implemented manually with custom Epsilon (eps) and MinPts selection using k-distance graph and grid search. |
-
-Each algorithm appends its clustering results sequentially into a single file:  
-**`all_outputs.txt`**  
-The results are stored in the following order:
-1. DBSCAN  
-2. Hierarchical  
-3. K-Means  
-
-### 3. **Evaluation of Techniques**
-All three clustering results are evaluated in **`Clustering_Comparison.ipynb`**, which includes **custom implementations** of the following metrics:
-- **Separation / Spread Ratio:** Measures ratio of cluster separation to intra-cluster spread.  
-- **Calinski–Harabasz (CH) Index:** Higher score = better-separated and more compact clusters.  
-- **Davies–Bouldin Index (DBI):** Lower score = better clustering.
-
----
-
-## 📊 Experimental Results
-
-### 🧩 Separation to Spread Ratio
-| Method | Ratio |
-|---------|------:|
-| **Hierarchical** | **2.4407** |
-| DBSCAN | 2.3936 |
-| K-Means | 1.1649 |
-
-### 🧩 Calinski–Harabasz (CH) Index
-| Clustering Method | CH Score |
-|-------------------|----------:|
-| **Hierarchical** | **97.2782** |
-| K-Means | 86.7430 |
-| DBSCAN | 78.5664 |
-
-### 🧩 Davies–Bouldin Index (DBI)
-| Clustering Method | DBI |
-|-------------------|-----:|
-| **Hierarchical** | **0.8194** |
-| DBSCAN | 1.0093 |
-| K-Means | 3.4313 |
-
----
-
-## 🔍 Observations
-- **Hierarchical Clustering** achieved the highest **Separation/Spread ratio (2.44)** and **CH Index (97.27)**, along with the lowest **DBI (0.82)**, indicating compact and well-separated clusters.  
-- **DBSCAN** closely followed, effectively handling noise and outliers but slightly less cohesive.  
-- **K-Means** showed higher intra-cluster variation, likely due to sensitivity to initialization and spherical cluster assumptions.  
-
-Overall, **Hierarchical Clustering** was found to be the most robust and effective clustering method for this dataset.
-
----
-
-## 🧠 Key Insights
-- Dimensionality reduction using **PCA** significantly improved computational efficiency and interpretability.  
-- Implementing metrics **from scratch** provided a deeper understanding of clustering evaluation.  
-- Consistent metric performance across methods validated the robustness of the evaluation pipeline.
-
----
-
-## 💻 Technologies Used
+## 💻 Technologies Used (Dependencies and Requirements)
 | Category | Tools |
 |-----------|--------|
 | **Language** | Python |
@@ -152,24 +61,80 @@ Overall, **Hierarchical Clustering** was found to be the most robust and effecti
 
 ---
 
-## ⚙️ Dependencies and Requirements
+## 🚀 Instructions for Running the Project
 
-### 🧩 Python Environment
-The project requires **Python 3.10+** and can be run seamlessly on **Google Colab** or **Jupyter Notebook**.
+### 🧩 Required Input Files
+For all clustering notebooks, the following files serve as inputs:
+* `cdata.csv`
+* `cleaned_customer_data.csv`
+* `all_outputs.txt` (this file is generated after the first clustering notebook is executed)
 
-### 📦 Installation
-Install the required dependencies before running any notebook:
-```bash
-pip install numpy pandas matplotlib seaborn scikit-learn scipy
-```
+### 🧮 Step-by-Step Execution
+
+#### 1️⃣ Data Preprocessing
+**Run → `Customer Data Cleaning.ipynb`**
+* **Loads:** `marketing_campaign.csv`
+* **Processes:** Cleans, encodes, scales, and applies PCA
+* **Generates:** `cdata.csv`, `cleaned_customer_data.csv`
+
+#### 2️⃣ Run Clustering Notebooks
+There are three clustering notebooks:
+1. `DBSCAN_Clustering.ipynb`
+2. `Hierarchical_Clustering.ipynb`
+3. `K_means_code.ipynb`
+
+These notebooks can be run in any order, but in this project they were executed sequentially as:  
+**DBSCAN → Hierarchical → K-Means**
+
+**Execution Flow:**
+
+1. **Run `DBSCAN_Clustering.ipynb`**
+   * **Input Files:** `cdata.csv`, `cleaned_customer_data.csv`
+   * **Output:** Generates `all_outputs.txt` containing DBSCAN clustering results.
+
+2. **Run `Hierarchical_Clustering.ipynb`**
+   * **Input Files:** `cdata.csv`, `cleaned_customer_data.csv`, and the previously generated `all_outputs.txt`
+   * **Output:** Appends hierarchical clustering results to `all_outputs.txt`.
+
+3. **Run `K_means_code.ipynb`**
+   * **Input Files:** `cdata.csv`, `cleaned_customer_data.csv`, and the updated `all_outputs.txt`
+   * **Output:** Produces the final version of `all_outputs.txt` containing clustering results for all three algorithms (DBSCAN → Hierarchical → K-Means).
+
+#### 3️⃣ Run Evaluation
+After completing all clustering notebooks, run:  
+**`Clustering_Comparison.ipynb`**
+
+* **Input Files:**
+   * `cleaned_customer_data.csv`
+   * Final `all_outputs.txt`
+
+This notebook evaluates and compares the clustering methods using:
+* Separation / Spread Ratio
+* Calinski–Harabasz (CH) Index
+* Davies–Bouldin Index (DBI)
+
+---
+## 📊 Experimental Results
+
+
+| **Metric** | **K-Means** | **Hierarchical** | **DBSCAN** |
+|:---------------------------|:---------:|:--------------:|:--------:|
+| **Separation to Spread Ratio** | 1.1649 | **2.4407** | 2.3936 |
+| **CH - Index** | 86.743 | **97.278** | 78.566 |
+| **DBI** | 3.431 | **0.819** | 1.009 |
 
 ---
 
-## 🧾 Conclusion
-- **Hierarchical Clustering** produced the most meaningful and interpretable customer groups.  
-- **DBSCAN** effectively identified arbitrary shapes and noise, though parameter-sensitive.  
-- **K-Means** performed adequately but was less suitable for the dataset's structure.  
-- These results highlight that **no single clustering method fits all datasets**—the choice must align with data distribution, density, and business objectives.
+### 🧾 Final Inference
+*  Dimensionality reduction using **PCA** significantly improved computational efficiency and interpretability.
+*  Each clustering notebook independently trains a model on the preprocessed data.
+*  The trained cluster labels are exported into `all_outputs.txt`, enabling comparison across models.
+* **Evaluation:** Final metrics (CH Index, DBI, and Spread Ratio) are displayed in `Clustering_Comparison.ipynb`.
+* **Hierarchical Clustering** achieved the highest **Separation/Spread ratio (2.44)** and **CH Index (97.27)**, along with the lowest **DBI (0.82)**, indicating compact and well-separated clusters.
+*  **DBSCAN** closely followed, effectively handling noise and outliers but slightly less cohesive.
+*  **K-Means** showed higher intra-cluster variation, likely due to sensitivity to initialization and spherical cluster assumptions.
+  
+Overall, **Hierarchical Clustering** was found to be the most robust and effective clustering method for this dataset.
 
 ---
 
