@@ -43,7 +43,7 @@ Here are the details of the data files gained after data cleaning:
 | File Name | Description |
 |------------|-------------|
 | **marketing_campaign.csv** | Original raw dataset containing customer information. |
-| **Customer Data Cleaning.ipynb** | Notebook demonstrating all preprocessing, encoding, and PCA steps. |
+| **Customer_Data_Cleaning.ipynb** | Notebook demonstrating all preprocessing, encoding, and PCA steps. |
 | **cdata.csv** | Cleaned dataset preserving original feature structure, futher used for drawing customer insights. |
 | **cleaned_customer_data.csv** | PCA-transformed dataset used for clustering. |
 | **DBSCAN_Clustering.ipynb** | Implements DBSCAN clustering from scratch. |
