@@ -1,10 +1,10 @@
 # 🧠 Customer Segmentation Using Clustering
 
 ## 📘 Project Overview 
-This project focuses on **Customer Segmentation** through **unsupervised machine learning** to group customers based on **demographic and purchase behavior**. The goal is to identify distinct customer profiles for **targeted marketing**, **personalized services**, and **strategic decision-making**.  
+This project focuses on **Customer Segmentation** through **unsupervised machine learning** to group customers based on **demographic and their purchase history**. The goal is to identify distinct customer profiles for **targeted marketing**, **personalized services**, and **strategic decision-making**.  
 
-Three clustering algorithms — **K-Means**, **Hierarchical Clustering**, and **DBSCAN** — are implemented **from scratch** and evaluated using three internal metrics:  
-- **Separation / Spread Ratio**  
+Three clustering algorithms **(K-Means**, **Hierarchical Clustering**, and **DBSCAN)** are implemented from scratch and evaluated using three internal metrics:  
+- **Separation to Spread Ratio**  
 - **Calinski–Harabasz (CH) Index**  
 - **Davies–Bouldin Index (DBI)**  
 
@@ -15,7 +15,7 @@ Three clustering algorithms — **K-Means**, **Hierarchical Clustering**, and **
 - **marketing_campaign.csv** — The **raw dataset** containing customer demographic, purchase, and campaign data.  
 
 ### 🧹 Data Cleaning and Transformation
-All preprocessing steps are detailed in **`Customer Data Cleaning.ipynb`**.  
+All preprocessing steps are detailed in **`Customer_Data_Cleaning.ipynb`**.  
 This notebook performs:
 1. **Handling Missing Values:**  
    - Replaced missing numeric values with the median and categorical values with the mode.  
