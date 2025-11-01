@@ -1,7 +1,7 @@
 # Customer Segmentation Using Clustering
 
 ## Project Overview 
-This project focuses on **Customer Segmentation** through **unsupervised machine learning** to group customers based on **demographic and their purchase history**. The goal is to identify distinct customer profiles for **targeted marketing**, **personalized services**, and **strategic decision-making**.  
+This project focuses on **Customer Segmentation** through unsupervised machine learning to group customers based on **demographic and their purchase history**. The goal is to identify distinct customer profiles from raw, mixed data. 
 
 Three clustering algorithms **(K-Means**, **Hierarchical Clustering**, and **DBSCAN)** are implemented from scratch and evaluated using three internal metrics:  
 - **Separation to Spread Ratio**  
