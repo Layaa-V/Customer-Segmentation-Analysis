@@ -12,7 +12,7 @@ Three clustering algorithms **(K-Means**, **Hierarchical Clustering**, and **DBS
 ## Dataset and Preprocessing
 
 ### Dataset Description
-- **marketing_campaign.csv** — The **raw dataset** containing customer demographic, purchase, and campaign data.  
+- **marketing_campaign.csv** — The *raw dataset* containing customer demographic, purchase, and campaign data.  
 
 ### Data Cleaning and Transformation
 All preprocessing steps are detailed in **Customer_Data_Cleaning.ipynb**.  
@@ -20,7 +20,7 @@ This notebook performs:
 1. **Handling Missing Values:** Replaced missing numeric values(observed in the feature'Income') with the median value.
 2. **Creating Conclusive Columns:** For repetitve variety features, like 'Total_Spending' and 'Total_Campaigns_Accepted'.
 3. **Encoding Categorical Data:** Can be seen for the feature 'Education' and 'Marital_Status'.    
-4. **Dimensionality Reduction:** Applied **Principal Component Analysis (PCA)** to reduce dimensionality while retaining maximum variance.
+4. **Dimensionality Reduction:** Applied Principal Component Analysis (PCA) to reduce dimensionality while retaining maximum variance.
 
 ### Cleaning Outputs
 Here are the details of the data files gained after data cleaning:
@@ -59,13 +59,13 @@ Here are the details of the data files gained after data cleaning:
 
 (The data cleaning python notebook(Customer_Data_Cleaning.ipynb) does not have to be necessarily run, as the final cleaned datafiles(cdata.csv and cleaned_customer_data.csv) have already been provided.  
 
-### Required Input Files
+### - Required Input Files
 For all clustering notebooks, the following files have to be uploaded in Google Colab's 'Files' section:
 * `cdata.csv`
 * `cleaned_customer_data.csv`
 * `all_outputs.txt` (this file is generated after the first clustering notebook is executed)
 
-### Step-by-Step Execution
+### - Step-by-Step Execution
 
 #### (1) Data Preprocessing
 **Run → `Customer Data Cleaning.ipynb`**
@@ -84,15 +84,15 @@ There are three clustering notebooks:
 
 **Execution Flow:**
 
-1. **Run `DBSCAN_Clustering.ipynb`**
+(a) **Run `DBSCAN_Clustering.ipynb`**
    * **Input Files:** `cdata.csv`, `cleaned_customer_data.csv`
    * **Output:** Generates `all_outputs.txt` containing DBSCAN clustering results.
 
-2. **Run `Hierarchical_Clustering.ipynb`**
+(b) **Run `Hierarchical_Clustering.ipynb`**
    * **Input Files:** `cdata.csv`, `cleaned_customer_data.csv`, and the previously generated `all_outputs.txt`
    * **Output:** Appends hierarchical clustering results to `all_outputs.txt`.
 
-3. **Run `K_means_code.ipynb`**
+(c) **Run `K_means_code.ipynb`**
    * **Input Files:** `cdata.csv`, `cleaned_customer_data.csv`, and the updated `all_outputs.txt`
    * **Output:** Produces the final version of `all_outputs.txt` containing clustering results for all three algorithms (DBSCAN → Hierarchical → K-Means).
 
@@ -139,8 +139,8 @@ Overall, **Hierarchical Clustering** was found to be the most robust and effecti
 **Prapti Halder (M25CSA022)**  
 **Suparni Maitra (M25CSA029)**  
 
-📍 *Course: CSL7620 – Machine Learning (Semester I)*  
-📅 *November 2025*  
-🏫 *Indian Institute of Technology Jodhpur*
+*Course: CSL7620 – Machine Learning (Semester I)*  
+*November 2025*  
+*Indian Institute of Technology Jodhpur*
 
 ---
